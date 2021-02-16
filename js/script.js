@@ -61,8 +61,11 @@
 // Each 60 seconds one random player from starting squad should be replaced with random player from reserves
 
 
-var teamData = {
-    teamName: 'FC Red Star',
+
+//starting object
+
+var zvezda = {
+    teamName: 'FC RED STAR',
     teamLogoPath: './img/fkcz_logo.png',
     teamLogoDesc: 'Red Star logo',
     players: [
@@ -72,108 +75,142 @@ var teamData = {
             number: 82,
             position: 'Goalkeeper',
             age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            photoPath: './img/players/149z69_MilanBorjan2.png'
+        },
+        {
+            firstName: 'Zoran',
+            lastName: 'Popovic',
+            number: 1,
+            position: 'Goalkeeper',
+            age: 33,
+            photoPath: './img/players/149z69_ZoranPopovic2.png'
+        },
+        {
+            firstName: 'Marko',
+            lastName: 'Gobeljic',
+            number: 77,
+            position: 'Defender',
+            age: 29,
+            photoPath: './img/players/149z69_MarkoGobeljic2.png'
         },
         {
             firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            lastName: 'Rodic',
+            number: 23,
+            position: 'Defender',
+            age: 30,
+            photoPath: './img/players/149z69_MilanRodic2.png'
+        },
+        {
+            firstName: 'Nemanja',
+            lastName: 'Milunovic',
+            number: 19,
+            position: 'Defender',
+            age: 32,
+            photoPath: './img/players/149z69_NemanjaMilunovic2.png'
         },
         {
             firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            lastName: 'Gajic',
+            number: 2,
+            position: 'Defender',
+            age: 25,
+            photoPath: './img/players/149z69_MilanGajic2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Radovan',
+            lastName: 'Pankov',
+            number: 6,
+            position: 'Defender',
+            age: 26,
+            photoPath: './img/players/149z69_RadovanPankov2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Milos',
+            lastName: 'Degenek',
+            number: 5,
+            position: 'Defender',
+            age: 27,
+            photoPath: './img/players/149z69_MilosDegenek2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Strahinja',
+            lastName: 'Erakovic',
+            number: 25,
+            position: 'Defender',
+            age: 20,
+            photoPath: './img/players/149z69_StrahinjaErakovic2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Guelor',
+            lastName: 'Kanga',
+            number: 8,
+            position: 'Midfilder',
+            age: 31,
+            photoPath: './img/players/149z69_GelorKanga2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Marko',
+            lastName: 'Ivanic',
+            number: 4,
+            position: 'Midfilder',
+            age: 28,
+            photoPath: './img/players/149z69_MirkoIvanic2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Njegos',
+            lastName: 'Petrovic',
+            number: 20,
+            position: 'Midfilder',
+            age: 22,
+            photoPath: './img/players/149z69_PetrovicNjegos2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
+            firstName: 'Veljko',
+            lastName: 'Nikolic',
+            number: 22,
+            position: 'Midfilder',
+            age: 22,
+            photoPath: './img/players/149z69_VeljkoNikolic2.png'
         },
         {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: '\img\players\fkcz_logo.png'
-        }
+            firstName: 'Zeljko',
+            lastName: 'Gavric',
+            number: 24,
+            position: 'Midfilder',
+            age: 21,
+            photoPath: './img/players/149z69_ZeljkoGavric2.png'
+        },
+        {
+            firstName: 'Sekou',
+            lastName: 'Sango',
+            number: 35,
+            position: 'Midfilder',
+            age: 32,
+            photoPath: './img/players/149z69_SekuSanogo2.png'
+        },
     ]
-}
+};
 
-// HEADER
+//HTML
+/////////////////////////////////////////////////////////////////////////////////
 
 //assign header tag to variable
 var header = document.querySelector('header');
 
+var container = document.createElement('div');
+header.appendChild(container);
+
 //insert logo image
-var logo = window.document.createElement('img');
-logo.setAttribute('src', teamData.teamLogoPath);
-logo.setAttribute('alt', teamData.teamLogoDesc);
-header.appendChild(logo);
+var logo = document.createElement('img');
+logo.setAttribute('src', zvezda.teamLogoPath);
+logo.setAttribute('alt', zvezda.teamLogoDesc);
+container.appendChild(logo);
 
 //insert h1
 var headline = window.document.createElement('h1');
 header.after(headline);
-document.querySelector('h1').innerHTML = teamData.teamName;
-
-//MAIN
+document.querySelector('h1').innerHTML = zvezda.teamName;
 
 //assign main tag to variable
 var main = document.querySelector('main');
@@ -181,33 +218,173 @@ var main = document.querySelector('main');
 //add first-squad section
 var firstSquad = document.createElement('section');
 main.appendChild(firstSquad);
-
 firstSquad.classList.add('first-squad');
-
-//add players
-var article = document.createElement('article');
-firstSquad.prepend(article);
-
-var player = "";
-
-
-
-
-
-
-
-
-
-document.querySelector('.first-squad article').innerHTML = '<div>Proba</div>';
-
-
-
-
 
 //add reserve-players section
 var reservePlayers = document.createElement('section');
 main.appendChild(reservePlayers);
-
 reservePlayers.classList.add('reserve-players');
 
+//add container 1000px
+container.classList.add('container');
+headline.classList.add('container');
+main.classList.add('container');
+
+//function fill player article with empty elements
+function fillArticle(element) {
+
+    var printImage = document.createElement('img');
+    printImage.classList.add('img');
+    element.appendChild(printImage);
+
+    var printName = document.createElement('p');
+    printName.classList.add('name');
+    element.appendChild(printName);
+
+    var printLastName = document.createElement('p');
+    printLastName.classList.add('last-name');
+    element.appendChild(printLastName);
+
+    var printNumber = document.createElement('p');
+    printNumber.classList.add('number');
+    element.appendChild(printNumber);
+
+    var printPosition = document.createElement('p');
+    printPosition.classList.add('position');
+    element.appendChild(printPosition);
+
+    var printAge = document.createElement('p');
+    printAge.classList.add('age');
+    element.appendChild(printAge);
+
+}
+
+////////////////////////////////////////////////////////////////////////////////////
+
+//JS
+
+// randomly mix players from the initial object(array)
+
+function randomPlayers(arr) {
+
+    var currentIndex, randomIndex, temporaryElement
+
+    for(var i = arr.length - 1; i > 0; i--) {
+
+        randomIndex = Math.floor(Math.random() * i);
+
+        temporaryElement = arr[i];
+
+        arr[i] = arr[randomIndex];
+
+        arr[randomIndex] = temporaryElement;
+
+    }
+
+    return arr;
+}
+
+var playersRandomArr = randomPlayers(zvezda.players);
+
+//insert text content and image src
+
+function addContentFS(array) {
+    firstSquad.lastChild.querySelector('.img').setAttribute('src', array[i].photoPath);
+    firstSquad.lastChild.querySelector('.name').textContent = 'Name: ' + array[i].firstName;
+    firstSquad.lastChild.querySelector('.last-name').textContent = 'Last name: ' + array[i].lastName;
+    firstSquad.lastChild.querySelector('.number').textContent = 'Number: ' + array[i].number;
+    firstSquad.lastChild.querySelector('.position').textContent = 'Position: ' + array[i].position;
+    firstSquad.lastChild.querySelector('.age').textContent = 'Age: ' + array[i].age;
+}
+
+//print players to article First Squad
+
+function createPlayerFirstSquad(arr) {
+
+    var article = document.createElement('article');
+
+    firstSquad.append(article);
+
+    fillArticle(article);
+
+    addContentFS(arr);
+}
+
+var teamOne = [];
+
+for (var i = 0; i < 11; i++) {
+    createPlayerFirstSquad(playersRandomArr);
+    teamOne.push(playersRandomArr[i]);
+}
+
+// console.log(teamOne);
+
+
+//insert text content and image src
+
+function addContentRT(arr) {
+    reservePlayers.lastChild.querySelector('.img').setAttribute('src', arr[i].photoPath);
+    reservePlayers.lastChild.querySelector('.name').textContent = 'Name: ' + arr[i].firstName;
+    reservePlayers.lastChild.querySelector('.last-name').textContent = 'Last name: ' + arr[i].lastName;
+    reservePlayers.lastChild.querySelector('.number').textContent = 'Number: ' + arr[i].number;
+    reservePlayers.lastChild.querySelector('.position').textContent = 'Position: ' + arr[i].position;
+    reservePlayers.lastChild.querySelector('.age').textContent = 'Age: ' + arr[i].age;
+}
+
+//show players to article Reserve Team
+
+function createPlayerReserveTeam(arr) {
+
+    var article = document.createElement('article');
+    reservePlayers.append(article);
+
+    fillArticle(article);
+
+    addContentRT(arr);
+
+}
+
+var teamTwo = [];
+
+for (var i = 11; i < 15; i++) {
+    createPlayerReserveTeam(playersRandomArr);
+    teamTwo.push(playersRandomArr[i]);
+}
+
+// console.log(teamTwo);
+
+//reset-delete all player articles
+function resetPlayers() {
+    document.querySelector('.first-squad').innerHTML = '';
+    document.querySelector('.reserve-players').innerHTML = '';
+}
+
+//BONUS replace one random player
+
+function substitution() {
+
+    var tempPosition;
+    var randomTeamOneIndex = Math.floor(Math.random()*teamOne.length);
+    var randomTeamTwoIndex = Math.floor(Math.random()*teamTwo.length);
+
+    tempPosition = teamOne[randomTeamOneIndex];
+
+    teamOne[randomTeamOneIndex] = teamTwo[randomTeamTwoIndex];
+    teamTwo[randomTeamTwoIndex] = tempPosition;
+
+    console.log(teamOne);
+    console.log(teamTwo);
+
+    resetPlayers();
+
+    for (var i = 0; i < 11; i++) {
+        createPlayerFirstSquad(teamOne);
+    }
+
+    for (var i = 0; i < 4; i++) {
+        createPlayerReserveTeam(teamTwo);
+    }
+
+}
+setInterval(substitution, 2000);
 
