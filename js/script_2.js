@@ -341,6 +341,9 @@ for (var i = 0; i < 11; i++) {
     teamOne.push(playersRandomArr[i]);
 }
 
+// console.log(teamOne);
+
+
 //insert text content and image src
 
 function addContentRT(arr) {
@@ -372,13 +375,18 @@ for (var i = 11; i < 15; i++) {
     teamTwo.push(playersRandomArr[i]);
 }
 
+// console.log(teamTwo);
+
 //reset-delete all player articles
 function resetPlayers() {
     document.querySelector('.first-squad').innerHTML = '';
     document.querySelector('.reserve-players').innerHTML = '';
 }
 
-function changeTeamArr() {
+
+//BONUS: ONE RANDOM SUBSTITUTION EVERY MINUTE
+function substitution() {
+
     var randomTeamOneIndex = Math.floor(Math.random()*teamOne.length);
     var randomTeamTwoIndex = Math.floor(Math.random()*teamTwo.length);
 
@@ -387,24 +395,37 @@ function changeTeamArr() {
     teamOne[randomTeamOneIndex] = teamTwo[randomTeamTwoIndex];
     teamTwo[randomTeamTwoIndex] = tempPosition;
 
-}
-
-// BONUS: ONE RANDOM SUBSTITUTION EVERY MINUTE
-function substitution() {
-
-    changeTeamArr();
-
     resetPlayers();
 
     for (var i = 0; i < 11; i++) {
-        createPlayerFirstSquad(teamOne);
+
+        var article = document.createElement('article');
+        firstSquad.append(article);
+        fillArticle(article);
+
+        firstSquad.lastChild.querySelector('.img').setAttribute('src', teamOne[i].photoPath);
+        firstSquad.lastChild.querySelector('.name').textContent = 'Name: ' + teamOne[i].firstName;
+        firstSquad.lastChild.querySelector('.last-name').textContent = 'Last name: ' + teamOne[i].lastName;
+        firstSquad.lastChild.querySelector('.number').textContent = 'Number: ' + teamOne[i].number;
+        firstSquad.lastChild.querySelector('.position').textContent = 'Position: ' + teamOne[i].position;
+        firstSquad.lastChild.querySelector('.age').textContent = 'Age: ' + teamOne[i].age;
     }
 
     for (var i = 0; i < 4; i++) {
-        createPlayerReserveTeam(teamTwo);
+        var article = document.createElement('article');
+        reservePlayers.append(article);
+        fillArticle(article);
+
+        reservePlayers.lastChild.querySelector('.img').setAttribute('src', teamTwo[i].photoPath);
+        reservePlayers.lastChild.querySelector('.name').textContent = 'Name: ' + teamTwo[i].firstName;
+        reservePlayers.lastChild.querySelector('.last-name').textContent = 'Last name: ' + teamTwo[i].lastName;
+        reservePlayers.lastChild.querySelector('.number').textContent = 'Number: ' + teamTwo[i].number;
+        reservePlayers.lastChild.querySelector('.position').textContent = 'Position: ' + teamTwo[i].position;
+        reservePlayers.lastChild.querySelector('.age').textContent = 'Age: ' + teamTwo[i].age;
     }
 
 }
     
-setInterval(substitution, 2000);
+setInterval(substitution, 60000);
+
 
