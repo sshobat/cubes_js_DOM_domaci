@@ -406,5 +406,5 @@ function substitution() {
 
 }
     
-setInterval(substitution, 2000);
+setInterval(substitution, 60000);
 
