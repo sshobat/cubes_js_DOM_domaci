@@ -9,6 +9,8 @@
     --lightgray: rgba(219, 219, 171, 0.294);
     --white: rgb(255,255,255);
     --red: rgb(255,0,0);
+    --lightRed: rgba(255,0,0,0.424);
+    --black: rgb(0, 0, 0);
     --transition: .3s ease;
 }
 
@@ -134,4 +136,31 @@ main > p:nth-child(6) {
 
 main > p:last-child {
     margin-bottom: 60px;
+    margin-top: 20px;
 }
+
+main > div {
+    background-color: var(--lightGray);
+    color: var(--black);
+    max-width: 200px;
+    width: 100px;
+    padding: 10px 15px;
+    text-align: center;
+    margin: 30px auto 0 auto;
+    border: 2px solid var(--red);
+    font-weight: bold;
+}
+
+.red-background {
+    background-color: var(--lightRed);
+    border: 2px solid var(--black);
+}
+
+#timerText, #timerNum {
+    display: inline-block;
+}
+
+#timerText {
+    margin-right: 10px;
+}
+

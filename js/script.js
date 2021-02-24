@@ -62,135 +62,54 @@
 
 
 
-//starting object
+//starting object and array
 
 var zvezda = {
     teamName: 'FC RED STAR',
     teamLogoPath: './img/fkcz_logo.png',
     teamLogoDesc: 'Red Star logo',
-    players: [
-        {
-            firstName: 'Milan',
-            lastName: 'Borjan',
-            number: 82,
-            position: 'Goalkeeper',
-            age: 34,
-            photoPath: './img/players/149z69_MilanBorjan2.png'
-        },
-        {
-            firstName: 'Zoran',
-            lastName: 'Popovic',
-            number: 1,
-            position: 'Goalkeeper',
-            age: 33,
-            photoPath: './img/players/149z69_ZoranPopovic2.png'
-        },
-        {
-            firstName: 'Marko',
-            lastName: 'Gobeljic',
-            number: 77,
-            position: 'Defender',
-            age: 29,
-            photoPath: './img/players/149z69_MarkoGobeljic2.png'
-        },
-        {
-            firstName: 'Milan',
-            lastName: 'Rodic',
-            number: 23,
-            position: 'Defender',
-            age: 30,
-            photoPath: './img/players/149z69_MilanRodic2.png'
-        },
-        {
-            firstName: 'Nemanja',
-            lastName: 'Milunovic',
-            number: 19,
-            position: 'Defender',
-            age: 32,
-            photoPath: './img/players/149z69_NemanjaMilunovic2.png'
-        },
-        {
-            firstName: 'Milan',
-            lastName: 'Gajic',
-            number: 2,
-            position: 'Defender',
-            age: 25,
-            photoPath: './img/players/149z69_MilanGajic2.png'
-        },
-        {
-            firstName: 'Radovan',
-            lastName: 'Pankov',
-            number: 6,
-            position: 'Defender',
-            age: 26,
-            photoPath: './img/players/149z69_RadovanPankov2.png'
-        },
-        {
-            firstName: 'Milos',
-            lastName: 'Degenek',
-            number: 5,
-            position: 'Defender',
-            age: 27,
-            photoPath: './img/players/149z69_MilosDegenek2.png'
-        },
-        {
-            firstName: 'Strahinja',
-            lastName: 'Erakovic',
-            number: 25,
-            position: 'Defender',
-            age: 20,
-            photoPath: './img/players/149z69_StrahinjaErakovic2.png'
-        },
-        {
-            firstName: 'Guelor',
-            lastName: 'Kanga',
-            number: 8,
-            position: 'Midfilder',
-            age: 31,
-            photoPath: './img/players/149z69_GelorKanga2.png'
-        },
-        {
-            firstName: 'Marko',
-            lastName: 'Ivanic',
-            number: 4,
-            position: 'Midfilder',
-            age: 28,
-            photoPath: './img/players/149z69_MirkoIvanic2.png'
-        },
-        {
-            firstName: 'Njegos',
-            lastName: 'Petrovic',
-            number: 20,
-            position: 'Midfilder',
-            age: 22,
-            photoPath: './img/players/149z69_PetrovicNjegos2.png'
-        },
-        {
-            firstName: 'Veljko',
-            lastName: 'Nikolic',
-            number: 22,
-            position: 'Midfilder',
-            age: 22,
-            photoPath: './img/players/149z69_VeljkoNikolic2.png'
-        },
-        {
-            firstName: 'Zeljko',
-            lastName: 'Gavric',
-            number: 24,
-            position: 'Midfilder',
-            age: 21,
-            photoPath: './img/players/149z69_ZeljkoGavric2.png'
-        },
-        {
-            firstName: 'Sekou',
-            lastName: 'Sango',
-            number: 35,
-            position: 'Midfilder',
-            age: 32,
-            photoPath: './img/players/149z69_SekuSanogo2.png'
-        },
-    ]
+    players: []
 };
+
+console.log(zvezda);
+
+var playerArr = [
+    ['Milan', 'Borjan', 82, 'Goalkeeper', 34, './img/players/149z69_MilanBorjan2.png'], 
+    ['Zoran', 'Popovic', 1, 'Goalkeeper', 33, './img/players/149z69_ZoranPopovic2.png'],
+    ['Marko', 'Gobeljic', 77, 'Defender', 29, './img/players/149z69_MarkoGobeljic2.png'],
+    ['Milan', 'Rodic', 23, 'Defender', 30, './img/players/149z69_MilanRodic2.png'],
+    ['Nemanja', 'Milunovic', 19, 'Defender', 32, './img/players/149z69_NemanjaMilunovic2.png'],
+    ['Milan', 'Gajic', 2, 'Defender', 25, './img/players/149z69_MilanGajic2.png'],
+    ['Radovan', 'Pankov', 6, 'Defender', 26, './img/players/149z69_RadovanPankov2.png'],
+    ['Milos', 'Degenek', 5, 'Defender', 27, './img/players/149z69_MilosDegenek2.png'],
+    ['Strahinja', 'Erakovic', 25, 'Defender', 20, './img/players/149z69_StrahinjaErakovic2.png'],
+    ['Guelor', 'Kanga', 8, 'Midfilder', 31, './img/players/149z69_GelorKanga2.png'],
+    ['Marko', 'Ivanic', 4, 'Midfilder', 28, './img/players/149z69_MirkoIvanic2.png'],
+    ['Njegos', 'Petrovic', 20, 'Midfilder', 22, './img/players/149z69_PetrovicNjegos2.png'],
+    ['Veljko', 'Nikolic', 22, 'Midfilder', 22, './img/players/149z69_VeljkoNikolic2.png'],
+    ['Zeljko', 'Gavric', 24, 'Midfilder', 21, './img/players/149z69_ZeljkoGavric2.png'],
+    ['Sekou', 'Sango', 35, 'Defender', 32, './img/players/149z69_SekuSanogo2.png']
+];
+
+console.log(playerArr);
+
+function Player(name, lastName, number, position, age, photoPath) {
+    this.firstName = name;
+    this.lastName = lastName;
+    this.number = number;
+    this.position = position;
+    this.age = age;
+    this.photoPath = photoPath;
+}
+
+function fillZvezdaObject() {
+    for(var i = 0; i < playerArr.length; i++) {
+        zvezda.players.push(new Player(playerArr[i][0], playerArr[i][1], playerArr[i][2], playerArr[i][3], playerArr[i][4], playerArr[i][5]));
+    }
+}
+fillZvezdaObject();
+
+console.log(zvezda);
 
 //HTML
 /////////////////////////////////////////////////////////////////////////////////
@@ -239,6 +158,19 @@ headingSecondTeam.innerHTML = 'Substitutions';
 var headingDescription = document.createElement('h3');
 reservePlayers.after(headingDescription);
 headingDescription.innerHTML = 'Application description';
+
+//insert counter
+var counterDIV = document.createElement('div');
+headingDescription.before(counterDIV);
+var counterParagraf = document.createElement('p');
+counterDIV.appendChild(counterParagraf);
+counterParagraf.setAttribute('id', 'timerNum');
+document.getElementById('timerNum').textContent = "20";
+
+var counterText = document.createElement('p');
+counterParagraf.before(counterText);
+counterText.setAttribute('id', 'timerText');
+document.getElementById('timerText').textContent = "Timer:";
 
 //insert p description
 var description = document.createElement('p');
@@ -291,7 +223,7 @@ function fillArticle(element) {
 
 function randomPlayers(arr) {
 
-    var currentIndex, randomIndex, temporaryElement
+    var randomIndex, temporaryElement
 
     for(var i = arr.length - 1; i > 0; i--) {
 
@@ -310,65 +242,57 @@ function randomPlayers(arr) {
 
 var playersRandomArr = randomPlayers(zvezda.players);
 
+console.log(playersRandomArr);
+
 //insert text content and image src
 
-function addContentFS(array) {
-    firstSquad.lastChild.querySelector('.img').setAttribute('src', array[i].photoPath);
-    firstSquad.lastChild.querySelector('.name').textContent = 'Name: ' + array[i].firstName;
-    firstSquad.lastChild.querySelector('.last-name').textContent = 'Last name: ' + array[i].lastName;
-    firstSquad.lastChild.querySelector('.number').textContent = 'Number: ' + array[i].number;
-    firstSquad.lastChild.querySelector('.position').textContent = 'Position: ' + array[i].position;
-    firstSquad.lastChild.querySelector('.age').textContent = 'Age: ' + array[i].age;
+function addContent(section, array, i) {
+    console.log(array, i)
+    section.lastChild.querySelector('.img').setAttribute('src', array[i].photoPath);
+    section.lastChild.querySelector('.name').textContent = 'Name: ' + array[i].firstName;
+    section.lastChild.querySelector('.last-name').textContent = 'Last name: ' + array[i].lastName;
+    section.lastChild.querySelector('.number').textContent = 'Number: ' + array[i].number;
+    section.lastChild.querySelector('.position').textContent = 'Position: ' + array[i].position;
+    section.lastChild.querySelector('.age').textContent = 'Age: ' + array[i].age;
 }
 
 //print players to article First Squad
 
-function createPlayerFirstSquad(arr) {
-
+function createPlayerFirstSquad(arr, i) {
+    console.log(arr);
     var article = document.createElement('article');
 
     firstSquad.append(article);
 
     fillArticle(article);
 
-    addContentFS(arr);
+    addContent(firstSquad, arr, i);
 }
 
 var teamOne = [];
 
 for (var i = 0; i < 11; i++) {
-    createPlayerFirstSquad(playersRandomArr);
+    createPlayerFirstSquad(playersRandomArr, i);
     teamOne.push(playersRandomArr[i]);
 }
 
-//insert text content and image src
+//print players to article Reserve Team
 
-function addContentRT(arr) {
-    reservePlayers.lastChild.querySelector('.img').setAttribute('src', arr[i].photoPath);
-    reservePlayers.lastChild.querySelector('.name').textContent = 'Name: ' + arr[i].firstName;
-    reservePlayers.lastChild.querySelector('.last-name').textContent = 'Last name: ' + arr[i].lastName;
-    reservePlayers.lastChild.querySelector('.number').textContent = 'Number: ' + arr[i].number;
-    reservePlayers.lastChild.querySelector('.position').textContent = 'Position: ' + arr[i].position;
-    reservePlayers.lastChild.querySelector('.age').textContent = 'Age: ' + arr[i].age;
-}
-
-//show players to article Reserve Team
-
-function createPlayerReserveTeam(arr) {
+function createPlayerReserveTeam(arr, i) {
 
     var article = document.createElement('article');
     reservePlayers.append(article);
 
     fillArticle(article);
 
-    addContentRT(arr);
+    addContent(reservePlayers, arr, i);
 
 }
 
 var teamTwo = [];
 
 for (var i = 11; i < 15; i++) {
-    createPlayerReserveTeam(playersRandomArr);
+    createPlayerReserveTeam(playersRandomArr, i);
     teamTwo.push(playersRandomArr[i]);
 }
 
@@ -377,6 +301,7 @@ function resetPlayers() {
     document.querySelector('.first-squad').innerHTML = '';
     document.querySelector('.reserve-players').innerHTML = '';
 }
+// resetPlayers();
 
 function changeTeamArr() {
     var randomTeamOneIndex = Math.floor(Math.random()*teamOne.length);
@@ -386,25 +311,52 @@ function changeTeamArr() {
 
     teamOne[randomTeamOneIndex] = teamTwo[randomTeamTwoIndex];
     teamTwo[randomTeamTwoIndex] = tempPosition;
-
 }
 
 // BONUS: ONE RANDOM SUBSTITUTION EVERY MINUTE
-function substitution() {
+
+var timerStart = 20;
+
+function substitute() {
 
     changeTeamArr();
 
     resetPlayers();
 
     for (var i = 0; i < 11; i++) {
-        createPlayerFirstSquad(teamOne);
+        createPlayerFirstSquad(teamOne, i);
     }
-
     for (var i = 0; i < 4; i++) {
-        createPlayerReserveTeam(teamTwo);
+        createPlayerReserveTeam(teamTwo, i);
     }
-
 }
-    
-setInterval(substitution, 60000);
+
+setInterval(substitute, (timerStart+1)*1000);
+
+function timer() {
+
+    var timerBox = document.querySelector('main > div');
+    var time = document.getElementById('timerNum');
+
+    setInterval(function() {
+        
+        if (timer > 0) {
+            timer--;
+        } else {
+            timer = timerStart;
+        }
+
+        time.textContent = timer;
+
+        if (timer < 11) {
+            timerBox.classList.add('red-background'); 
+        } else {
+            timerBox.classList.remove('red-background'); 
+        }
+    }, 1000);
+}
+timer();
+
+
+
 
